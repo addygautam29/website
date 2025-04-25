@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Showcase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    .hero {
+      background: url('https://static.startuptalky.com/2021/06/nothing_logo_startuptalky.png') center/cover no-repeat;
+      color: white;
+      padding: 100px 200px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      padding: 12px 25px;
+      background: #ff6347;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #e55342;
+    }
+
+    .product-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 15px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #e55342;
+      margin-bottom: 10px;
+    }
+
+    .product-card a {
+      text-decoration: none;
+      color: #ff6347;
+      font-weight: bold;
+    }
+
+    .product-card a:hover::after {
+      content: " - ₹" attr(data-price);
+      color: #222;
+      font-weight: normal;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+    }
+
+    /* Product Details Page Styles */
+    .container {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    img {
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6347;
+      margin-bottom: 15px;
+    }
+
+    .specs, .other-info {
+      margin-top: 20px;
+    }
+
+    .specs h3, .other-info h3 {
+      margin-top: 15px;
+      color: #e55342;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #ff6347;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background: #e55342;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Tech Showcase</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Nothing</h1>
+    <button class="cta-btn">Shop Now</button>
+  </section>
+
+  <section id="products" class="product-section">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://shop.mobily.com.sa/wp-content/uploads/2024/06/E-shop-phone1.png" alt="Phone">
+        <h3>Smartphone</h3>
+        <h1>Nothing Phone (1), 128GB, Black</h1>
+        <p>Experience blazing-fast performance, a pro-grade camera, and a stunning AMOLED display.</p>
+        <p class="price">Price: ₹29,999</p>
+        <a href="product1.html" data-price="29999">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwHNkM5H2ssNVnZZdkUknslA3Rw9iYBPZong&s" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <h1>Nothing Watch Pro 2  </h1>
+        <p>Track your health and stay connected with sleek design and long-lasting battery.</p>
+        <p class="price">Price: ₹14,999</p>
+        <a href="product2.html" data-price="14999">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71oK0nwUZML.jpg" alt="Earphones">
+        <h1>Nothing Wireless Earphones</h1>
+        <h3> Earphones</h3>
+        <p>Enjoy immersive sound with noise-cancellation and wireless freedom.</p>
+        <p class="price">Price: ₹3,999</p>
+        <a href="product3.html" data-price="3999">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Tech Showcase. All rights reserved.</p>
+  </footer>
+
+  <!-- Product 1 (Mobile Phone) Details Page -->
+  <div class="container">
+    <img src="https://shop.mobily.com.sa/wp-content/uploads/2024/06/E-shop-phone1.png" alt="Mobile Phone">
+    <h1>Nothing Phone (1), 128GB, Black
+        </h1>
+    <p class="price">₹49,999</p>
+
+    <div class="specs">
+      <h3>Specifications:</h3>
+      <ul>
+        <li><strong>Display:</strong> 6.7" AMOLED, 120Hz</li>
+        <li><strong>Processor:</strong> Snapdragon 8 Gen 2</li>
+        <li><strong>RAM:</strong> 12GB</li>
+        <li><strong>Storage:</strong> 256GB UFS 3.1</li>
+        <li><strong>Camera:</strong> 108MP + 12MP + 5MP Triple Rear | 32MP Front</li>
+        <li><strong>Battery:</strong> 5000mAh with 65W fast charging</li>
+        <li><strong>OS:</strong> Android 13</li>
+      </ul>
+    </div>
+
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <!-- Product 2 (Smartwatch) Details Page -->
+  <div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwHNkM5H2ssNVnZZdkUknslA3Rw9iYBPZong&s" alt="Smartwatch">
+    <h1>Nothing Watch Pro 2 </h1>
+    <p class="price">₹14,999</p>
+
+    <div class="specs">
+      <h3>Specifications:</h3>
+      <ul>
+        <li><strong>Display:</strong> 1.4" AMOLED, 360 x 360</li>
+        <li><strong>Processor:</strong> Exynos 9110</li>
+        <li><strong>RAM:</strong> 1.5GB</li>
+        <li><strong>Storage:</strong> 16GB</li>
+        <li><strong>Battery:</strong> 340mAh, up to 2 days of usage</li>
+        <li><strong>OS:</strong> Tizen OS</li>
+        <li><strong>Water Resistance:</strong> IP68 (Swim-proof)</li>
+      </ul>
+    </div>
+
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <!-- Product 3 (Headphones) Details Page -->
+  <div class="container">
+    <img src="https://m.media-amazon.com/images/I/71oK0nwUZML.jpg" alt="Earphones">
+    <h1>Nothing Wireless Earphones</h1>
+    <p class="price">₹3,999</p>
+
+    <div class="specs">
+      <h3>Specifications:</h3>
+      <ul>
+        <li><strong>Type:</strong> Over-ear, Wireless</li>
+        <li><strong>Driver Size:</strong> 40mm</li>
+        <li><strong>Frequency Response:</strong> 20Hz - 20kHz</li>
+        <li><strong>Bluetooth Version:</strong> 5.0</li>
+        <li><strong>Battery:</strong> 400mAh, up to 15 hours of playback time</li>
+        <li><strong>Charging Time:</strong> 2 hours</li>
+        <li><strong>Water Resistance:</strong> IPX4 (Sweatproof and splashproof)</li>
+        <li><strong>Microphone:</strong> Built-in mic for calls</li>
+        <li><strong>Compatibility:</strong> Android, iOS, Windows</li>
+      </ul>
+    </div>
+
+    <div class="other-info">
+      <h3>Additional Features:</h3>
+      <ul>
+        <li>Noise-cancellation for immersive sound</li>
+        <li>Soft ear cushions for long-wear comfort</li>
+        <li>Built-in controls for volume, play/pause, and skip</li>
+        <li>Foldable design for easy storage</li>
+        <li>Built-in voice assistant support</li>
+      </ul>
+    </div>
+
+    <a href="index.html">Back to Home</a>
+  </div>
+
+  <footer>
+    <p>&copy; Mobile_number = 9219641522 All rights reserved.</p>
+  </footer>
+</body>
+</html>
